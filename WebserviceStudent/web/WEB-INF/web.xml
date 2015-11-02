@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app id="WebApp_ID" version="3.0" xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee     http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
+    <display-name>User Management</display-name>
+    <servlet>
+        <servlet-name>Jersey RESTful Application</servlet-name>
+        <servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+        <init-param>
+            <param-name>jersey.config.server.provider.packages</param-name>
+            <param-value>com.servicelib</param-value>
+        </init-param>
+    </servlet>
+    <servlet>
+        <servlet-name>UserAuthontication</servlet-name>
+        <servlet-class>com.controller.UserAuthontication</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>adduser</servlet-name>
+        <servlet-class>com.controller.adduser</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>registerorganization</servlet-name>
+        <servlet-class>com.controller.registerorganization</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Logout</servlet-name>
+        <servlet-class>com.controller.Logout</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>addrequestUser</servlet-name>
+        <servlet-class>com.controller.addrequestUser</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>addrequestOrg</servlet-name>
+        <servlet-class>com.controller.addrequestOrg</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>getlatesrstrequest</servlet-name>
+        <servlet-class>com.controller.getlatesrstrequest</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Jersey RESTful Application</servlet-name>
+        <url-pattern>/rest/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserAuthontication</servlet-name>
+        <url-pattern>/UserAuthontication</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>adduser</servlet-name>
+        <url-pattern>/adduser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>registerorganization</servlet-name>
+        <url-pattern>/registerorganization</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Logout</servlet-name>
+        <url-pattern>/Logout</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addrequestUser</servlet-name>
+        <url-pattern>/addrequestUser</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>addrequestOrg</servlet-name>
+        <url-pattern>/addrequestOrg</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>getlatesrstrequest</servlet-name>
+        <url-pattern>/getlatesrstrequest</url-pattern>
+    </servlet-mapping>
+</web-app>
